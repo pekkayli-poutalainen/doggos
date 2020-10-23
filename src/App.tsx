@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Voting from "./Voting";
 
 function App() {
     return (
@@ -50,6 +51,7 @@ const Doggos = () => {
             {doggos.map((d) => (
                 <Doggo doggo={d} />
             ))}
+            <Voting />
         </div>
     );
 };
