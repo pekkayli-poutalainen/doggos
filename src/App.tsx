@@ -16,7 +16,7 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Learn React 9000
+                    Do not learn React 9000
                 </a>
             </header>
         </div>
