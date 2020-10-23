@@ -30,7 +30,7 @@ const Doggos = () => {
     React.useEffect(() => {
         const getAndSetDoggos = async () => {
             const tmp = await fetch(
-                "https://doggos.prismic.io/api/v1/documents/search?ref=X5LAmhAAACIAaBTY#format=json"
+                "https://doggos.prismic.io/api/v1/documents/search?ref=X5LCAxAAAB4AaBtj#format=json"
             );
             const data = await tmp.json();
             console.log("doggos", data);
