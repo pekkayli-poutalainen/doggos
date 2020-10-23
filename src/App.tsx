@@ -31,7 +31,7 @@ const Doggos = () => {
     React.useEffect(() => {
         const getAndSetDoggos = async () => {
             const tmp = await fetch(
-                "https://doggos.prismic.io/api/v1/documents/search?ref=X5LCAxAAAB4AaBtj#format=json"
+                "https://doggos.prismic.io/api/v1/documents/search?ref=X5LXUxAAACAAaH2I#format=json"
             );
             const data = await tmp.json();
             console.log("doggos", data);
@@ -56,33 +56,21 @@ const Doggos = () => {
     );
 };
 
-const Doggo = ({ doggo }: { doggo: Doggo }) => {
-    return (
-        <div
-            style={{
-                display: "flex",
-                padding: 10,
-                justifyContent: "center",
-            }}
-        >
-            <div
-                style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    border: "1px solid lightgray",
-                    padding: 20,
-                    boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
-                }}
-            >
-                <h2>{doggo.name}</h2>
-                <div>Omistaja: {doggo.owner}</div>
-                <img src={doggo.img} alt="doggo" />
-                <div>
-                    {doggo.is_crazy_killer_dog ? "KILLER DOGGO" : "Nice doggo"}
-                </div>
+interface DogArgs {
+    doggo: Doggo;
+}
+
+const Doggo = ({ doggo }: { doggo: Doggo }) => (
+    <div>
+        <div>
+            <h2>{doggo.name}</h2>
+            <div>Omistaja: {doggo.owner}</div>
+            <img src={doggo.img} alt="doggo" />
+            <div>
+                {doggo.is_crazy_killer_dog ? "KILLER DOGGO" : "Nice doggo"}
             </div>
         </div>
-    );
-};
+    </div>
+);
 
 export default App;
