@@ -61,8 +61,22 @@ interface DogArgs {
 }
 
 const Doggo = ({ doggo }: { doggo: Doggo }) => (
-    <div>
-        <div>
+    <div
+        style={{
+            display: "flex",
+            padding: 10,
+            justifyContent: "center",
+        }}
+    >
+        <div
+            style={{
+                display: "flex",
+                flexDirection: "column",
+                border: "1px solid lightgray",
+                padding: 20,
+                boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
+            }}
+        >
             <h2>{doggo.name}</h2>
             <div>Omistaja: {doggo.owner}</div>
             <img src={doggo.img} alt="doggo" />
